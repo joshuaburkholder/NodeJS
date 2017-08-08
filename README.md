@@ -11,3 +11,7 @@
 		a.mapping_req.js (static web server)
 		b.foo.txt
 		c.link.html
+	3. Express Server
+		-express_project/
+		a. server.js
+		b. npm packages: express, morgan
