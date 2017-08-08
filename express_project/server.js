@@ -1,11 +1,13 @@
 var express = require('express'),
+    morgan = require('morgan'),
     app = express();
 
 //define routes => specific [action] . . . [action]
 // // eg, '/users/me' => looks up my user, renders profile view
 
 //Define middleware from other packages
-// app.use()
+app.use(morgan('combined'))
+
 
 //Create routes
 app.get("/hello", function(req, res){

@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "dependencies":{
-  	"express":"*"
+  	"express":"*",
+  	"morgan":"*"
   },
   "author": "JJB",
   "license": "ISC"
