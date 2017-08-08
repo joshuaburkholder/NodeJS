@@ -2,8 +2,10 @@
 # NodeJS
 
 ## To Do List Command Line Utility
-
-## Simple Server (Req, Res)
+	1. Creates a "to do list" on the command line
+		a. index.js
+	
+## Server (Req, Res)
 	1. Simple Server
 		a.server.js
 
