@@ -5,7 +5,7 @@ var express = require('express'),
 // // eg, '/users/me' => looks up my user, renders profile view
 
 //Define middleware from other packages
-app.use()
+// app.use()
 
 //Create routes
 app.get("/hello", function(req, res){
@@ -18,7 +18,7 @@ app.get("/goodbye", function(req, res){
 
 //Catch all other routes (and all other requests)
 app.all("*", function(req, res){
-  res.send(404);
+  res.sendStatus(404);
 });
 
 app.listen(8080, function(){
