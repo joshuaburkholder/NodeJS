@@ -19,11 +19,11 @@ server.on('request', function(req, res){
 
   fs.exists(filename, function(exists){
     if(!exists)
-        return genericSend(404, 'not found');
+        return genericSend(404, 'not found', res);
 
     fs.readFile(filename, 'binary', function(err, file){
       if(err)
-        return genericSend(500, 'internal server error'); 
+        return genericSend(500, 'internal server error', res); 
 
       var type = mime.lookup(filename);
       res.writeHead(200, {'Content-Type':type});
