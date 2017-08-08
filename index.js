@@ -31,7 +31,3 @@ rl.on('line', function(line){
 
     rl.prompt();
 });
-
-
-// var index = array.indexOf(item);
-// array.splice(index, 1);
