@@ -1,5 +1,6 @@
 var express = require('express'),
-    app = express();
+    app = express(),
+    articles = require('./controllers/articles');
 
 //CRUD 
 
@@ -11,6 +12,11 @@ a post will look like this:
     author: "",
     comments: []
 }
+a comment will look like
+{
+    name:"",
+    text:""
+}
 */
 
 
@@ -19,8 +25,8 @@ var notImplemented = function(req, res){
 }
 
 app.get('/articles', notImplemented); //show all articles
+app.get('/articles/new', articles.new);
 app.get('/articles/:articleId', notImplemented);
-app.get('/articles/new', notImplemented);
 app.post('/articles', notImplemented); 
 app.put('/articles/:articleId'notImplemented);
 app.del('/articles/:articleId', notImplemented);
