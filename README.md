@@ -7,7 +7,7 @@
 	1. Creates a "to do list" on the command line
 		a. index.js
 		
-## Simple Server (Req, Res)
+## reqres (Server)
 	1. Simple Server
 		a.server.js
 
