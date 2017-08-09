@@ -16,3 +16,10 @@
 		-express_project/
 		a. server.js
 		b. npm packages: express, morgan
+
+## blog 
+	1. Mock blog using Node
+		blog/
+		a. server.js
+		b. controllers/articles.js
+		c. npm packages: express, body-parser
