@@ -1,9 +1,12 @@
 
 # NodeJS
-	##Below are listings of the contents of each branch in this project
+##Below are listings of the contents of each branch in this project
+
 
 ## To Do List Command Line Utility
-
+	1. Creates a "to do list" on the command line
+		a. index.js
+		
 ## Simple Server (Req, Res)
 	1. Simple Server
 		a.server.js
