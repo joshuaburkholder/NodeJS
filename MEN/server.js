@@ -8,9 +8,14 @@ var express = require('express'),
 app.use(bodyParser());
 
 app.use(morgan('tiny'));
+
 app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'ejs');
+
+
+
+
 
 app.listen(port);
 console.log("Server is listening on %s", port);
