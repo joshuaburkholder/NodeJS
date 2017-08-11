@@ -7,7 +7,7 @@ var express = require('express'),
 
 app.use(bodyParser());
 
-app.use(morgan());
+app.use(morgan('tiny'));
 app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'ejs');
