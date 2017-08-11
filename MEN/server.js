@@ -16,8 +16,11 @@ app.set('view engine', 'ejs');
 MongoClient.connect('mongodb://127.0.0.1:27017/member', function(err, db){
   if(err) throw err;
 
-  var collection = db.collections('members');
+  var collection = db.collection('members');
   var index = function(req,res){};
+    collection.find().toArray(function(err,members){
+      res.render('index', {members:members});
+    });
 
   var addMember = function(req,res){
     collection.insert(req.body,function(err, docs){
@@ -27,10 +30,10 @@ MongoClient.connect('mongodb://127.0.0.1:27017/member', function(err, db){
   };
 
   //list members
-  app.get('/members');
+  app.get('/members', index);
 
   //add new members
-  app.post('/members');
+  app.post('/members', addMember);
 
 
   app.listen(port);
