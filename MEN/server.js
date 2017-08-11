@@ -17,10 +17,12 @@ MongoClient.connect('mongodb://127.0.0.1:27017/member', function(err, db){
   if(err) throw err;
 
   var collection = db.collection('members');
-  var index = function(req,res){};
+  var index = function(req,res){
     collection.find().toArray(function(err,members){
       res.render('index', {members:members});
     });
+  };
+
 
   var addMember = function(req,res){
     collection.insert(req.body,function(err, docs){
