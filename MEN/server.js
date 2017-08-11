@@ -27,7 +27,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017/member', function(err, db){
   var addMember = function(req,res){
     collection.insert(req.body,function(err, docs){
       console.log(docs);
-      res.send(200);
+      res.redirect('/members');
     });
   };
 
