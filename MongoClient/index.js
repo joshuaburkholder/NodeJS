@@ -1,6 +1,3 @@
-//connect to mongo
-//insert doc into collection
-//query that collection
 
 var MongoClient = require('mongodb').MongoClient;
 
