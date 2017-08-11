@@ -13,9 +13,29 @@ app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'ejs');
 
+MongoClient.connect('mongodb://127.0.0.1:27017/member', function(err, db){
+  if(err) throw err;
+
+  var collection = db.collections('members');
+  var index = function(req,res){};
+
+  var addMember = function(req,res){
+    collection.insert(req.body,function(err, docs){
+      console.log(docs);
+      res.send(200);
+    });
+  };
+
+  //list members
+  app.get('/members');
+
+  //add new members
+  app.post('/members');
 
 
+  app.listen(port);
+  console.log("Server is listening on %s", port);
 
 
-app.listen(port);
-console.log("Server is listening on %s", port);
+})
+
