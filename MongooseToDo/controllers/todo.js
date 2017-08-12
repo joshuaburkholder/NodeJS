@@ -6,7 +6,10 @@ var mongoose = require('mongoose'),
 controller.index = [
   function(req, res, next){
       //fn to collect & render view to display todo's
-    res.render('./todo/index', {todos:[]});
+    Todo.find({},function(err, todos){
+      if(err) return next(err);
+      res.render('todo/index', {todos:todos})
+    });
   }
 ];
 
