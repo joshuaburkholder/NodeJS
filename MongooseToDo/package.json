@@ -6,7 +6,8 @@
     "express":"*",
     "mongoose":"",
     "ejs":"*",
-    "morgan":"*"
+    "morgan":"*",
+    "body-parser":"*"
   },
   "main":"server.js",
   "author":"jjb",
