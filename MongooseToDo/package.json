@@ -5,7 +5,8 @@
   "dependencies":{
     "express":"*",
     "mongoose":"",
-    "ejs":"*"
+    "ejs":"*",
+    "morgan":"*"
   },
   "main":"server.js",
   "author":"jjb",
