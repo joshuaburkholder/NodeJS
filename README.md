@@ -42,3 +42,16 @@
 		  c. index.js
 		d. server.js
 		e. npm packages: mongodb, express, ejs, morgan, body-parser
+
+	3. Mongoose ToDo List
+		*to do list app with Mongoose Schema (and jQuery)
+		-controllers/
+		  a. todo.js
+		-model/
+		  b. todo.js		
+		-views/
+		  c. index.ejs
+		  d. top.ejs
+		  e. bottom.ejs
+		f. server.js
+		e. npm packages: mongoose, express, ejs, morgan, body-parser
