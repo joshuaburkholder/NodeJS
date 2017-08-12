@@ -3,7 +3,11 @@ var express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
     morgan = require('morgan');
-    // todoController = require('./controllers/todo');
+
+require('./models/todo'),
+var todoController = require('./controllers/todo');
+
+
 
 mongoose.connect('mongodb://localhost/mgoosetodo')
 
