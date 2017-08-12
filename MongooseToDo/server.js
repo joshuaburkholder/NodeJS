@@ -7,8 +7,6 @@ var express = require('express'),
 require('./models/todo'),
 var todoController = require('./controllers/todo');
 
-
-
 mongoose.connect('mongodb://localhost/mgoosetodo')
 
 app.use(bodyParser.json());
