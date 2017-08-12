@@ -1,0 +1,13 @@
+{
+  "name":"mongooseToDo",
+  "version":"0.0.0",
+  "description":"",
+  "dependencies":{
+    "express":"*",
+    "mongoose":"",
+    "ejs":"*"
+  },
+  "main":"server.js",
+  "author":"jjb",
+  "license":"MIT"
+}
