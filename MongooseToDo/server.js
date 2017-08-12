@@ -10,7 +10,7 @@ var todoController = require('./controllers/todo');
 mongoose.connect('mongodb://localhost/mgoosetodo')
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(morgan('combined'));
 
 app.set('view engine', 'ejs');

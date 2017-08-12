@@ -1,16 +1,18 @@
+<% include top %>
+
+
+
 <ul>
   <% todos.forEach(function(todo) { %>
     <li class="todo">
       <span><%=todo.name%></span>
-      <input class="edit" data-id="<%=todo.id%>" style="display:none" value="<%=todo.name%>" />
-      <input class="edit" data-id="<%=todo.priority%>" style="display:none" value="<%=todo.priority%> />"
+      <input class="edit" data-id="<%=todo.id%>" style="display:none" value="<%=todo.name%>">
     </li>
   <% }); %>
 </ul>
 
 <form method="post" action="/">
   <input autofocus name="name" />
-  <input type="number" name="priority" placeholder="priority" step="1" min="1" max="10">
   <button type="submit">Add To Do</button>
 </form>
 
@@ -27,7 +29,7 @@
     var self = $(this),
         span = self.siblings('span'),
         request = $.ajax({
-          type:"PUT",
+          type:'PUT',
           data:{name:self.val()},
           url:'/' + self.attr('data-id') 
         });
