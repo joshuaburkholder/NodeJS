@@ -6,6 +6,7 @@ var mongoose = require('mongoose'),
 controller.index = [
   function(req, res, next){
       //fn to collect & render view to display todo's
+    res.render('./todo/index', {todos:[]});
   }
 ];
 
@@ -13,10 +14,18 @@ controller.index = [
 controller.create = [
   function(req, res, next){
     //fn to validate input
-    next();
+    if("name" in req.body && req.body.name !== ''){
+      next();
+    } else {
+      res.send(400);
+    }
   },
-  function(){
-    //fn to create teh todo, send json obj
+  function(req, res, next){
+    //fn to create the todo, send json obj
+    Todo.create(req.body, function(err, todo){
+      if(err) return next(err);
+      res.json(todo);
+    })
   }
 ];
 

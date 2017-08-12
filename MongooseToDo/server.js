@@ -4,7 +4,7 @@ var express = require('express'),
     mongoose = require('mongoose'),
     morgan = require('morgan');
 
-require('./models/todo'),
+require('./model/todo');
 var todoController = require('./controllers/todo');
 
 mongoose.connect('mongodb://localhost/mgoosetodo')
