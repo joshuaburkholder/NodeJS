@@ -15,10 +15,10 @@ app.set('view engine', 'ejs');
 
 // routes
 
-// app.get();
-// app.post();
-// app.put();
-// app.delete();
+app.get('/', todoController.index);
+app.post('/', todoController.create);
+app.put('/:todoId', todoController.update);
+app.delete('/todoId', todoController.delete);
 
 app.listen(8080, function(){           
   console.log("Server is listening on 8080");  
