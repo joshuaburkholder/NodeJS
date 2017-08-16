@@ -1,0 +1,12 @@
+{
+  "name": "express_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies":{
+  	"express":"*",
+  	"morgan":"*"
+  },
+  "author": "JJB",
+  "license": "ISC"
+}

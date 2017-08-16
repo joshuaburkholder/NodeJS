@@ -54,4 +54,3 @@
 		  e. bottom.ejs
 		f. server.js
 		e. npm packages: mongoose, express, ejs, morgan, body-parser
-
