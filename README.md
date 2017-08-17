@@ -1,4 +1,3 @@
-
 # NodeJS
 ##Below are listings of the contents of each branch in this project
 
@@ -7,7 +6,7 @@
 	1. Creates a "to do list" on the command line
 		a. index.js
 		
-## Simple Server (Req, Res)
+## reqres (Server)
 	1. Simple Server
 		a.server.js
 
@@ -24,16 +23,15 @@
 ## blog 
 	1. Mock blog using Node
 		blog/
-		  a. server.js
-		  b. controllers/articles.js
-		  c. npm packages: express, body-parser
-
+		a. server.js
+		b. controllers/articles.js
+		c. npm packages: express, body-parser
 
 ## MongoDB
 	1. MongoClient
 		*connect to mongodb, add to & query a collection
-		a. index.js
-		b. npm packages: mongodb
+		  a. index.js
+		  b. npm packages: mongodb
 
 	2. MEN (Mongo, Express, Node)
 		*Store and update a member list
@@ -42,8 +40,8 @@
 		  b. style.css
 		-VIEWS/
 		  c. index.ejs
-		d. server.js
-		e. npm packages: mongodb, express, ejs, morgan, body-parser
+  		d. server.js
+	  	e. npm packages: mongodb, express, ejs, morgan, body-parser
 
 	3. Mongoose ToDo List
 		*to do list app with Mongoose Schema (and jQuery)
