@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title>MEN:Members</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<ul>
+  <% members.forEach(function(member) { %>
+    <li><%=member.name%></li>
+  <% }); %>
+</ul>
+
+<button><a href="new.html">Add New Member</a></button>
+
+</body></html>

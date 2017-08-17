@@ -1,0 +1,15 @@
+{
+  "name":"men_stack",
+  "version":"0.0.0",
+  "description":"",
+  "main":"server.js",
+  "dependencies":{
+    "mongodb":"*",
+    "express":"*",
+    "ejs":"*",
+    "morgan":"*",
+    "body-parser":"*"
+  },
+  "author":"jjb",
+  "license":"MIT"
+}

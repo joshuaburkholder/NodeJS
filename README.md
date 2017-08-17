@@ -14,10 +14,11 @@
 		a.mapping_req.js (static web server)
 		b.foo.txt
 		c.link.html
+		
 	3. Express Server
-		-express_project/
-		a. server.js
-		b. npm packages: express, morgan
+		express_project/
+		  a. server.js
+		  b. npm packages: express, morgan
 
 ## blog 
 	1. Mock blog using Node
@@ -29,8 +30,8 @@
 ## MongoDB
 	1. MongoClient
 		*connect to mongodb, add to & query a collection
-		a. index.js
-		b. npm packages: mongodb
+		  a. index.js
+		  b. npm packages: mongodb
 
 	2. MEN (Mongo, Express, Node)
 		*Store and update a member list
@@ -38,9 +39,9 @@
 		  a. new.html
 		  b. style.css
 		-VIEWS/
-		  c. index.js
-		d. server.js
-		e. npm packages: mongodb, express, ejs, morgan, body-parser
+		  c. index.ejs
+  		d. server.js
+	  	e. npm packages: mongodb, express, ejs, morgan, body-parser
 
 	3. Mongoose ToDo List
 		*to do list app with Mongoose Schema (and jQuery)
