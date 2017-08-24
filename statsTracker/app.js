@@ -10,6 +10,9 @@ const express = require('express'),
 
 const app = express();
 
+//connect to mongoose
+
+
 //require models: Activity, Category, User
 
 // app set up
