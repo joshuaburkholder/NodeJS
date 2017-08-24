@@ -40,4 +40,6 @@ app.listen(3000, function(){
   console.log("Application running.")
 });
 
+module.exports = app;
+
 
