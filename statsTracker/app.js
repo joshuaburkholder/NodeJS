@@ -14,6 +14,7 @@ const app = express();
 
 
 //require models: Activity, Category, User
+mongoose.connect('mongodb://localhost:27017/babystats');
 
 // app set up
 app.engine('mustache', mustacheExpress());
@@ -24,9 +25,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(expressValidator());
 
-
-
 //define routes
+
+app.get('/', function(req, res){
+  res.redirect('api/splash');
+});
+
+//  // confirm connection
+  app.use(function(req, res, next){
+    console.log('You are now connected');
+  })
 
 app.listen(3000, function(){
   console.log("Application running.")
