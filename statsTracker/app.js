@@ -8,12 +8,15 @@ const express = require('express'),
       mongoose = require('mongoose'),
       session = require('express-session');
 
-
 const app = express();
+
+//require models: Activity, Category, User
+
+
+//define routes
 
 app.listen(3000, function(){
   console.log("Application running.")
 });
 
-//require models: Activity, Category, User
 
