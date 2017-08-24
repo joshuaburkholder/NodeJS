@@ -93,7 +93,21 @@ app.get('/api/:activity/:_id', function(req, res){
   });
 });
 
-
+app.get('/api/:activity', function(req, res){
+  User.find({}).then(function(users){
+    Category.findOne({activity_type:req.params.activity})
+    .then(function(categories){ Activities.find({
+      activity_name: req.params.activity
+    }).then(function(activities){
+      res.render('date', {
+        users: users,
+        categories: categories,
+        activities: activities
+        })
+      });
+    });
+  });
+});
 
 
 
