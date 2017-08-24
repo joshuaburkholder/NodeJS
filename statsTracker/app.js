@@ -12,6 +12,16 @@ const app = express();
 
 //require models: Activity, Category, User
 
+// app set up
+app.engine('mustache', mustacheExpress());
+app.set('view engine', 'mustache');
+app.set('views', './views');
+app.use(express.static('public'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(expressValidator());
+
+
 
 //define routes
 
