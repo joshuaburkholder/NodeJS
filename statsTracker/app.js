@@ -38,6 +38,19 @@ app.get('/', function(req, res){
     console.log('You are now connected');
   })
 
+//Create a new category
+
+app.post('/api/home', function(req, res){
+  Category.create({
+    activity_type: req.body.category,
+  }).then(activity => {
+    res.redirect('/api/home')
+  });
+});
+
+
+
+
 app.listen(3000, function(){
   console.log("Application running.")
 });
