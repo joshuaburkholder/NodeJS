@@ -11,10 +11,12 @@ const express = require('express'),
 const app = express();
 
 //connect to mongoose
-
+mongoose.connect('mongodb://localhost:27017/babystats');
 
 //require models: Activity, Category, User
-mongoose.connect('mongodb://localhost:27017/babystats');
+const Activity = require('./models/activity');
+const Category = require('./models/category');
+const User = require('./models/user');
 
 // app set up
 app.engine('mustache', mustacheExpress());

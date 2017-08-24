@@ -26,4 +26,4 @@ const activitySchema = new mongoose.Schema({
 const Activity = mongoose.model('Activity', activitySchema);
 activitySchema.plugin(uniqueValidator);
 
-module.exports = Activity
+module.exports = Activity;
