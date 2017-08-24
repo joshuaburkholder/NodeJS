@@ -1,0 +1,23 @@
+{
+  "name": "busybaby",
+  "version": "0.0.1",
+  "description": "A stats tracker for busy babies.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  	"express": "^4.15.3",
+  	"parseurl": "^1.3.1",
+  	"body-parser": "^1.17.2",
+  	"path": "*",
+  	"express-validator": "^3.2.1",
+  	"mustache":"^2.3.0",
+  	"mustache-express": "^1.2.5",
+  	"mongoose-unique-validator": "^1.0.5",
+  	"mongoose": "^4.11.3",
+  	"express-session": "^1.15.5"
+  },
+  "author": "JJB",
+  "license": "ISC"
+}
