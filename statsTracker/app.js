@@ -38,6 +38,22 @@ app.get('/', function(req, res){
     console.log('You are now connected');
   })
 
+app.get('/api/home', function(req, res) {
+  User.find({}).then(function(users){
+    Category.find({}).then(function(categories){
+      Activity.find({}).then(function(activities){
+        console.log(activities);
+        res.render('home', {
+          users: users,
+          categories: categories,
+          activities: activities,
+        })
+      });
+    });
+  });
+});
+
+
 //Create a new category
 
 app.post('/api/home', function(req, res){
@@ -47,6 +63,36 @@ app.post('/api/home', function(req, res){
     res.redirect('/api/home')
   });
 });
+
+//Create a new activity
+
+app.post('/api/:activity/:_id', function(req, res){
+  Activity.create({
+    activity_name: req.body.activity,
+    quantity: req.body.quantity,
+    metric: req.body.metric,
+    category: req.params.activity,
+  }).then( activity => {
+    console.log("ready to log categories");
+    res.redirect('/api/:activity/:_id')
+  });
+});
+
+app.get('/api/:activity/:_id', function(req, res){
+  User.find({}).then(function(users){
+    Category.findOne({activity_type:req.params.activity})
+    .then(function(categories){
+      Activity.find({ category:
+        req.params.activity}).then(function(activities){
+          res.render('activity', {
+            users: users,
+            activities: activities,
+          })
+        });
+    });
+  });
+});
+
 
 
 
