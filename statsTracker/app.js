@@ -8,15 +8,12 @@ const express = require('express'),
       mongoose = require('mongoose'),
       session = require('express-session');
 
-const app = express();
-
-//connect to mongoose
-mongoose.connect('mongodb://localhost:27017/babystats');
-
 //require models: Activity, Category, User
 const Activity = require('./models/activity');
 const Category = require('./models/category');
 const User = require('./models/user');
+
+const app = express();
 
 // app set up
 app.engine('mustache', mustacheExpress());
@@ -27,8 +24,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(expressValidator());
 
-//define routes
 
+//connect to mongoose
+mongoose.connect('mongodb://localhost:27017/babystats');
+
+
+//define routes
 app.get('/', function(req, res){
   res.redirect('api/splash');
 });
@@ -36,7 +37,24 @@ app.get('/', function(req, res){
 //  // confirm connection
   app.use(function(req, res, next){
     console.log('You are now connected');
+    next();
   })
+
+app.get('/api/splash', function(req, res) {
+        res.render('splash', {
+        })
+      });
+
+
+//Create a new category
+
+app.post('/api/home', function(req, res){
+  Category.create({
+    activity_type: req.body.category,
+  }).then(activity => {
+    res.redirect('/api/home')
+  });
+});
 
 app.get('/api/home', function(req, res) {
   User.find({}).then(function(users){
@@ -53,16 +71,6 @@ app.get('/api/home', function(req, res) {
   });
 });
 
-
-//Create a new category
-
-app.post('/api/home', function(req, res){
-  Category.create({
-    activity_type: req.body.category,
-  }).then(activity => {
-    res.redirect('/api/home')
-  });
-});
 
 //Create a new activity
 

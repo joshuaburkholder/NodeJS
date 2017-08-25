@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf=8">
+  <title>BusyBaby</title>
+
+
+</head>
+<body>
+
+<div class="title">
+  BusyBaby
+  Wecome, {{#users}}{{username}}{{/users}}
+</div>
+
+<div class="wrapper">
+
+  <form class="category_input" action="/api/home" method="post">
+    <div class="subtitle1_container">
+      <div class="subtitle1">Step 1: Create a new category</div>
+    </div>
+    <label class="subtitle2">New Category</label>
+    <input autocomplete="off" class="input" required type="text" name="category">
+    <input class="form_submit-btn" type="submit">>
+
+    <div class="select_container">
+      <div class="subtitle3_container">
+        <div class="subtitle1">Step 2: Select a category</div>
+      </div>
+
+      <label class="subtitle2">Category Name:</label>
+      {{#categories}}
+        <div class="act"><a class="categoryList" href={{activity_type}}/{{_id}} value={{_id}}{{#dates}}{{date}}{{/dates}}>{{activity_type}}</a>
+        </div>
+      {{/categories}}
+    </div>
+    </div>
+  </form>
+
+  <form class="activity_input" action="/api/home" method="post">
+    <div class="subtitle1_container">
+      <div class="subtitle1">Step 3: Add an activity</div>
+    </div>
+
+  <div class="form_container">
+
+    <div class="formInput"> 
+      <div class="subtitle2">Enter an activity</div>
+      <input disabled="disabled" class="input1" required type="text" name="activity" value="select a category first">
+      <div class="subtitle2">Enter Quantity</div>
+      <input disabled="disabled" class="input1" required type="text" name="quantity" value="select a category first">
+      <div class="subtitle2">Define Metric</div>
+      <input disabled="disabled" class="input1" required type="text" name="metric" value="select a category first">
+    </div>
+
+  </div>
+  </form>
+
+  <div class="activityname1">
+    <div class="title_container">
+      <div class="title">Step 4: Click on an activity to display information</div>
+    </div>
+    <label class="title2">All tracked activities:</label>
+    <div class="act">{{#activities}}<a href="/api/{{activity_name}}">{{activity_name}}</a>{{/activites}}</div>
+  </div>
+
+
+</div>
+
+
+</body>
+</html>
