@@ -55,3 +55,12 @@
 		  e. bottom.ejs
 		f. server.js
 		e. npm packages: mongoose, express, ejs, morgan, body-parser
+
+## Node_Chat 
+	1. Simple chat app with jade template
+		a. index.js
+		public/
+		b. chat.js
+		tpl/
+		c. page.jade
+		d. npm packages: express, socket.io, jade
