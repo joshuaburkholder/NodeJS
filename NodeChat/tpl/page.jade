@@ -4,11 +4,17 @@ html
         title= "Real time web chat"
         script(src='/chat.js')
         script(src='/socket.io/socket.io.js')
+        link(rel='stylesheet', href='/style.css')
     body
-        #content(style='width: 500px; height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;')
-        .controls
-            | Name: 
-            input#name(style='width:350px;')
-            br
-            input#field(style='width:350px;')
-            input#send(type='button', value='send')
+        .container
+            h2 Chat App: 
+            #content
+            .controls
+                | Name: 
+                input#name
+                br
+                br
+                | Message: 
+                input#field
+                br
+                input#send(type='button', value='send')

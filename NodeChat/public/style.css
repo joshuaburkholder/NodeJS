@@ -1,0 +1,49 @@
+body{
+  background-color: #000;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  margin-right: auto;
+}
+
+h2{
+  width: 200px;
+  margin: auto auto;
+  margin-bottom: 15px;
+}
+
+.container{
+  width: 80vw;
+  background-color: #ededed;
+}
+
+.controls {
+  display: inline-block;
+  width: 20%;
+  margin: 12px;
+}
+
+#content{
+  float: left;
+  width: 45%;
+  height: 80vh; 
+  margin: 0 0 20px 0; 
+  border: solid 3px #444; 
+  overflow-y: scroll;
+  background-color: white;
+  margin-right: 15px;
+}
+
+#field{
+  width: 200px;
+}
+
+#send{
+  border: 3px solid black;
+  border-radius: 5px;
+  float: right;
+  margin: 12px;
+}
+
+#send:hover, #send:focus{
+  opacity: .7;
+}
