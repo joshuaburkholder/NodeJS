@@ -13,6 +13,18 @@ app.get('/sample', function(req, res){
 
 var router = express.Router();
 
+// Route middlewware
+
+router.use(function(req, res, next){
+
+  //log each reqest to the console
+  console.log(req.method, req.url);
+
+  //continue processings the request
+  next();
+})
+
+
 // Route to HOME 
 
 router.get('/', function(req, res){
