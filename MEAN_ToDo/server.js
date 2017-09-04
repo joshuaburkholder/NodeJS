@@ -24,7 +24,7 @@ var Todo = mongoose.model('Todo', {
   // api
 
   //get all todos
-  app.get('api/todos', function(req, res){
+  app.get('/api/todos', function(req, res){
     Todo.find(function(err, todos){
       if(err)
         res.send(err)
@@ -32,7 +32,7 @@ var Todo = mongoose.model('Todo', {
     });
   });
 
-  app.post('api/todos', function(req, res){
+  app.post('/api/todos', function(req, res){
     Todo.create({
       text: req.body.text,
       done: false 
