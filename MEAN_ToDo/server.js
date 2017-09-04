@@ -61,6 +61,10 @@ var Todo = mongoose.model('Todo', {
       });
     });
   });
-  
+
+app.get('*', function(req, res){
+  res.sendfile('./public/index.html');
+})
+
 app.listen(8080);
 console.log('Server listening on port 8080');
