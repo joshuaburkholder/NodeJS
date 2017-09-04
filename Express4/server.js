@@ -37,8 +37,12 @@ router.get('/about', function(req, res){
   res.send('About stuff');
 });
 
-// Apply routes
+// Create route with parameters
+router.get('/hello/:name', function(req, res){
+  res.send('hello ' + req.params.name + '!');
+});
 
+// Apply routes
 app.use('/', router);
 
 
