@@ -5,6 +5,10 @@ var port = process.env.PORT || 8080;
 
 //ROUTES
 
+app.get('/sample', function(req, res){
+  res.send('Sample app');
+});
+
 
 
 
