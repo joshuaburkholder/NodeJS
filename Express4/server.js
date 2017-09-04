@@ -15,10 +15,19 @@ var router = express.Router();
 
 // Route to HOME 
 
+router.get('/', function(req, res){
+  res.send('Hello home page!');
+});
+
 // Route to ABOUT
+
+router.get('/about', function(req, res){
+  res.send('About stuff');
+});
 
 // Apply routes
 
+app.use('/', router);
 
 
 
